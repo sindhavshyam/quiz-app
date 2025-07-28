@@ -8,6 +8,7 @@
         const [index,setIndex] = useState(0);
         const [score,setScore] = useState(0);
         const [showscore,setShowscore] = useState(false)
+        const [refresh,setRefresh] = useState(false)
 
         const next = ()=>{
             if(index < que.length-1){
@@ -15,6 +16,7 @@
             }
             else{
                 setShowscore(true);
+                setRefresh(true)
             }
         
         }
@@ -28,6 +30,9 @@
         
 
         console.log(score)
+        const reset = ()=>{
+            window.location.reload();
+        }
         
 
     return (
@@ -61,7 +66,8 @@
             </div>
             </div>
             <div className="flex items-center justify-center">
-                <button onClick={next} className="px-6 py-3 bg-blue-500 rounded text-xl">Next</button>
+                {refresh ? (<button onClick={reset} className='px-6 py-3 bg-blue-500 rounded text-xl'>Refresh</button>):(<button onClick={next} className='px-6 py-3 bg-blue-500 rounded text-xl'>Next</button>)}
+
             </div>
         </div>
         </>
