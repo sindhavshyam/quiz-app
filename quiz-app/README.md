@@ -1,5 +1,5 @@
 # React + Vite
-show website [Visit OpenAI](https://mcqs-app.netlify.app/)
+show website [Quiz-app](https://mcqs-app.netlify.app/)
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
